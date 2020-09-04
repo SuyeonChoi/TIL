@@ -1,0 +1,10 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.main-contet{
+    backgroud: blue;
+    
+}
