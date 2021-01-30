@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 //Controller Annotation 기입 필수
 @Controller
 public class HelloController {
-    @GetMapping("hello")
+    @GetMapping("hello") //웹에서 /hello 호출시 mapping. GET방식
     public String hello(Model model) {
-        model.addAttribute("data", "hello!!");
+        model.addAttribute("data", "hello!!"); //key:data, value:hello!!
         return "hello";
     }
 
@@ -29,7 +29,7 @@ public class HelloController {
         return "hello " + name; //hello spring
     }
 
-    //API방식 - json방식(key-value구조)으로 데이터 전달
+    //API방식 - json(key-value구조)으로 데이터 전달
     @GetMapping("hello-api")
     @ResponseBody
     public Hello helloApi(@RequestParam("name") String name) {
