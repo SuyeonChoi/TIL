@@ -9,7 +9,12 @@ import java.util.Optional;
 
 //비지니스 의존적 설계. 비즈니스에 가까운 로직을 기입
 public class MemberService {
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
+
 
     /*
      * 회원 가입
@@ -30,13 +35,13 @@ public class MemberService {
     }
 
     /*
-    *전체 회원조회
+     *전체 회원조회
      */
-    public List<Member> findMembers(){
+    public List<Member> findMembers() {
         return memberRepository.findAll();
     }
 
-    public Optional<Member> findOne(Long memberId){
+    public Optional<Member> findOne(Long memberId) {
         return memberRepository.findById(memberId);
     }
 }
