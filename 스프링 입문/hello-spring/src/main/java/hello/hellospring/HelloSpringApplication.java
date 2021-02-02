@@ -1,4 +1,4 @@
-package hello.hellospring;
+package hello.hellospring; //hello.hellospring의 하위패키지만 스프링빈으로 등록됨. Component 스캔 대상
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
