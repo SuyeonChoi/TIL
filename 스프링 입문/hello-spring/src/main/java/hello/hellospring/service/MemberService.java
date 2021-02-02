@@ -11,11 +11,11 @@ import java.util.Optional;
 
 //비지니스 의존적 설계. 비즈니스에 가까운 로직을 기입
 //Service annotation으로 spring이 관리 가능하게 함
-@Service
+//@Service
 public class MemberService {
     private final MemberRepository memberRepository;
 
-    @Autowired
+//    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
