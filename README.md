@@ -1,9 +1,19 @@
 # TIL
 Today I Learned
 
-
-## Spring
-### 스프링 입문
-* 기간: 2021.01.14 ~ 202021.02.04  
-* 실습: [Spring Boot 실습 폴더](https://github.com/SuyeonChoi/TIL/tree/master/%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%9E%85%EB%AC%B8/hello-spring)  
+## Python - 챗봇 App
+* 2020.08.11  
+* [참고한 실습 코드](https://github.com/SuyeonChoi/TIL/tree/master/chatbot-app-master)  
+* 쎄트렉아이에서 인턴기간동안 프로젝트 개발을 위해 [인프런 강의](https://www.inflearn.com/course/%EB%94%B0%EB%9D%BC%ED%95%98%EB%A9%B0-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EB%85%B8%EB%93%9C-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%B1%97%EB%B4%87/dashboard)로 공부  
+  
+## Python - Web개발, Deep Learning  
+* 2020.08.11 ~ 2020.10.02
+* [Web 개발 실습 폴더](https://github.com/SuyeonChoi/TIL/tree/master/Python%20Web%20Developement)  
+* [Deep Learning 실습 폴더](https://github.com/SuyeonChoi/TIL/tree/master/Deep%20Learning(A.I.))  
+* [스터디 기록](https://suyeonchoi.github.io/categories/til/)
+* [uni2237](https://github.com/uni2237), 원송희와 함께 2학기 중간고사 이전까지 스터디 진행  
+  
+## Spring - 스프링 입문
+* 2021.01.14 ~ 202021.02.04  
+* [Spring Boot 실습 폴더](https://github.com/SuyeonChoi/TIL/tree/master/%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%9E%85%EB%AC%B8/hello-spring)  
 * [인프런-스프링 입문](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8/dashboard) 강의와 해당된 실습을 진행  
