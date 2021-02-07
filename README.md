@@ -11,7 +11,7 @@ Today I Learned
 * [Web 개발 실습 폴더](https://github.com/SuyeonChoi/TIL/tree/master/Python%20Web%20Developement)  
 * [Deep Learning 실습 폴더](https://github.com/SuyeonChoi/TIL/tree/master/Deep%20Learning(A.I.))  
 * [스터디 기록](https://suyeonchoi.github.io/categories/til/)
-* [uni2237](https://github.com/uni2237), 원송희와 함께 2학기 중간고사 이전까지 스터디 진행  
+* [uni2237](https://github.com/uni2237), 원송희와 함께 2학기 중간고사 이전까지 스터디 진행(완료 못함)  
   
 ## Spring - 스프링 입문
 * 2021.01.14 ~ 202021.02.04  
