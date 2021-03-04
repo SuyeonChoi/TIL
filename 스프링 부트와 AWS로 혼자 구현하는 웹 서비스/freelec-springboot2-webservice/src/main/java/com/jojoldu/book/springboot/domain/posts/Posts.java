@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 // Entity 클래스에서는 Setter 생성 X
-// 대신 목적(이벤트)에 맞는 public 메소드로 값을 변경 
+// 대신 목적(이벤트)에 맞는 public 메소드로 값을 변경
 
 @Getter //모든 필드의 Getter메소드 자동생성
 @NoArgsConstructor // 기본 생성자 자동 추가
