@@ -1,14 +1,23 @@
+//머스테치에 URL 매핑
 package com.jojoldu.book.springboot.web;
 
+import com.jojoldu.book.springboot.service.posts.PostsService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-//머스테치에 URL 매핑
+@RequiredArgsConstructor
 @Controller
 public class IndexController {
 
+    private final PostsService postsService;
+
     @GetMapping("/")
-    public String index() {
+    public String index(Model model) {
+        //Model은 서버 템플릿 엔진에서 사용할 수 있는 객체 저장 가능
+        //postsService.findAllDesc()로 가져온 결과를 posts로 index.mustache에 전달
+        model.addAttribute("posts", postsService.findAllDesc());
         return "index";
     }
 

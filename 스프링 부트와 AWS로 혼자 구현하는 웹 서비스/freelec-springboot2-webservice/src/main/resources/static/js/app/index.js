@@ -1,4 +1,4 @@
-//index 객체 안에서만 function이 유효하도록하여 다른 JS와 겹칠 위험 제거  
+//index 객체 안에서만 function이 유효하도록하여 다른 JS와 겹칠 위험 제거
 var main = {
     init : function () {
         var _this = this;
