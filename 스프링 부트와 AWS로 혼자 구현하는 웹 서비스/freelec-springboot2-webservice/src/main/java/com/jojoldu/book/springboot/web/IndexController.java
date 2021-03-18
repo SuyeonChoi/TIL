@@ -1,6 +1,7 @@
 //머스테치에 URL 매핑
 package com.jojoldu.book.springboot.web;
 
+import com.jojoldu.book.springboot.config.auth.LoginUser;
 import com.jojoldu.book.springboot.config.auth.dto.SessionUser;
 import com.jojoldu.book.springboot.service.posts.PostsService;
 import com.jojoldu.book.springboot.web.dto.PostsResponseDto;
@@ -17,16 +18,13 @@ import javax.servlet.http.HttpSession;
 public class IndexController {
 
     private final PostsService postsService;
-    private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model) {
+    public String index(Model model, @LoginUser SessionUser user) {
         //Model은 서버 템플릿 엔진에서 사용할 수 있는 객체 저장 가능
         //postsService.findAllDesc()로 가져온 결과를 posts로 index.mustache에 전달
         model.addAttribute("posts", postsService.findAllDesc());
 
-        //index.mustache에서 userName을 사용할수 있도록 model에 저장
-        SessionUser user = (SessionUser) httpSession.getAttribute("user");
         //세션에 저장된 값이 있을 때만 model에 userName으로 등록
         if(user != null){
             model.addAttribute("userName", user.getName());
