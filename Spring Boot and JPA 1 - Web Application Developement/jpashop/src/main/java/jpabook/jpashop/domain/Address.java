@@ -14,7 +14,7 @@ public class Address {
 
     protected Address() {
         //jpa 스펙상 만듦
-        //함부로 생성되면 안되므로 protected 
+        //함부로 생성되면 안되므로 protected
     }
 
     public Address(String city, String street, String zipcode) {
