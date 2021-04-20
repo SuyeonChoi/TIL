@@ -44,7 +44,7 @@ public class MemberController {
 
     @GetMapping("/members")
     public String list(Model model) {
-        //api로 개발시에는 엔티티를 전달하면 안됨. 
+        //api로 개발시에는 엔티티를 전달하면 안됨.
         List<Member> members = memberService.findMembers();
         model.addAttribute("members", members);
         return "members/memberList";
