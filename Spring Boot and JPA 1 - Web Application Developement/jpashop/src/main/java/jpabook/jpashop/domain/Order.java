@@ -40,7 +40,7 @@ public class Order {
     private LocalDateTime orderDate; //주문 시간
 
     @Enumerated(EnumType.STRING)
-    private OrderStatus orderStatus; //주문 상태[ORDER, CANCEL]
+    private OrderStatus status; //주문 상태[ORDER, CANCEL]
 
     //==연관관계(양방향) (편의) 메서드==//
     public void setMember(Member member) {
@@ -67,7 +67,7 @@ public class Order {
         for (OrderItem orderItem : orderItems) {
             order.addOrderItem(orderItem);
         }
-        order.setOrderStatus(OrderStatus.ORDER);
+        order.setStatus(OrderStatus.ORDER);
         order.setOrderDate(LocalDateTime.now());
         return order;
     }
@@ -81,7 +81,7 @@ public class Order {
             throw new IllegalStateException("이미 배송 완료된 상품은 취소가 불가능합니다.");
         }
 
-        this.setOrderStatus(OrderStatus.CANCEL);
+        this.setStatus(OrderStatus.CANCEL);
         for (OrderItem orderItem : orderItems) {
             orderItem.cancel();
         }
