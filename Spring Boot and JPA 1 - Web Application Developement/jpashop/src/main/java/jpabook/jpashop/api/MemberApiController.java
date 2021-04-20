@@ -20,7 +20,7 @@ public class MemberApiController {
 
     @GetMapping("/api/v1/members")
     public List<Member> membersV1() {
-        //엔티티 노출 금지!! (비추천 방법) 
+        //엔티티 노출 금지!! (비추천 방법)
         return memberService.findMembers();
     }
 
