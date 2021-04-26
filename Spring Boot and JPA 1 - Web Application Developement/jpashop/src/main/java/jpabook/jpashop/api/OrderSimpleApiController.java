@@ -5,6 +5,8 @@ import jpabook.jpashop.domain.Order;
 import jpabook.jpashop.domain.OrderStatus;
 import jpabook.jpashop.repository.OrderRepository;
 import jpabook.jpashop.repository.OrderSearch;
+import jpabook.jpashop.repository.order.simplequery.OrderSimpleQueryDto;
+import jpabook.jpashop.repository.order.simplequery.OrderSimpleQueryRepository;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +26,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class OrderSimpleApiController {
     private final OrderRepository orderRepository;
+    private final OrderSimpleQueryRepository orderSimpleQueryRepository;
 
     @GetMapping("/api/v1/sample-orders")
     public List<Order> ordersV1() {
@@ -58,7 +61,14 @@ public class OrderSimpleApiController {
                 .collect(Collectors.toList());
         return result;
         // 지연로딩 X
-        // 실무에서 자주 사용되는 방법 
+        // 실무에서 자주 사용되는 방법
+    }
+
+    @GetMapping("/api/v4/sample-orders")
+    public List<OrderSimpleQueryDto> ordersV4() {
+        return orderSimpleQueryRepository.findOrderDtos();
+        // v3와 v4의 기능은 trade-off 관계
+        // v4는 레파지토리 재사용성이 떨어짐
     }
 
     @Data
