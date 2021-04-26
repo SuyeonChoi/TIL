@@ -40,7 +40,7 @@ public class OrderSimpleApiController {
     @GetMapping("/api/v2/sample-orders")
     public List<SimpleOrderDto> ordersV2() {
         // Order 2개
-        // N + 1의 문제 
+        // N + 1의 문제
         List<Order> orders = orderRepository.findAllByString(new OrderSearch());
 
         // 루프를 두번 돈다 - 쿼리 총 5번 ...
@@ -48,6 +48,17 @@ public class OrderSimpleApiController {
                 .map(o -> new SimpleOrderDto(o))
                 .collect(Collectors.toList());
         return result;
+    }
+
+    @GetMapping("/api/v3/sample-orders")
+    public List<SimpleOrderDto> ordersV3() {
+        List<Order> orders = orderRepository.findAllWithMemberDelivery();
+        List<SimpleOrderDto> result = orders.stream()
+                .map(o -> new SimpleOrderDto(o))
+                .collect(Collectors.toList());
+        return result;
+        // 지연로딩 X
+        // 실무에서 자주 사용되는 방법 
     }
 
     @Data
