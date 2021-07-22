@@ -18,10 +18,10 @@ public class JpaMain {
         try {
 
             //영속
-            Member member = new Member(200L, "member200");
-            em.persist(member);
+            Member member = em.find(Member.class, 150L);
+            member.setName("AAAAA");
 
-            em.flush(); // 영속성 컨텍스트의 변경내용을 DB에 동기화
+            em.clear(); // 영속 -> 준영속 
 
             System.out.println("==============");
             tx.commit(); // 필수
