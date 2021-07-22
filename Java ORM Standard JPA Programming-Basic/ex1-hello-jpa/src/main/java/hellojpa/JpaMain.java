@@ -17,16 +17,11 @@ public class JpaMain {
 
         try {
 
-            // 비영속. DB에 저장 X
-            Member member = new Member();
-            member.setId(100L);
-            member.setName("HelloJPA");
+            //영속
+            Member member = em.find(Member.class, 150L);
+            member.setName("ZZZZZZ");
 
-            // 영속
-            System.out.println("==== BEFORE ====");
-            em.persist(member);
-            System.out.println("==== AFTER ==== ");
-
+            System.out.println("++++++++++++++");
             tx.commit(); // 필수
         } catch (Exception e) {
             tx.rollback();
