@@ -17,15 +17,15 @@ public class JpaMain {
 
         try {
 
-            // Member findMember = em.find(Member.class,  1L);
-            List<Member> result = em.createQuery("select m from Member as m", Member.class)
-                    .setFirstResult(5)
-                    .setMaxResults(8)
-                    .getResultList(); // query의 대상은 테이블이 아닌 객체
-            
-            for (Member member: result) {
-                System.out.println("member.getName() = " + member.getName());
-            }
+            // 비영속. DB에 저장 X
+            Member member = new Member();
+            member.setId(100L);
+            member.setName("HelloJPA");
+
+            // 영속
+            System.out.println("==== BEFORE ====");
+            em.persist(member);
+            System.out.println("==== AFTER ==== ");
 
             tx.commit(); // 필수
         } catch (Exception e) {
