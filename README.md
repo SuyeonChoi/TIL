@@ -17,3 +17,8 @@ Today I Learned
 * 2021.01.14 ~ 202021.02.04  
 * [Spring Boot 실습 폴더](https://github.com/SuyeonChoi/TIL/tree/master/%EC%8A%A4%ED%94%84%EB%A7%81%20%EC%9E%85%EB%AC%B8/hello-spring)  
 * [인프런-스프링 입문](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8/dashboard) 강의와 해당된 실습을 진행  
+
+## 실전! 스프링 부트와 JPA 활용1 - 웹 애플리케이션 개발. 
+* 2021.04.19 ~ 2021.04.26. 
+* [실습 폴더](https://github.com/SuyeonChoi/TIL/tree/master/Spring%20Boot%20and%20JPA%201%20-%20Web%20Application%20Developement/jpashop)  
+* [인프런-실전! 스프링 부트와 JPA 활용1](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-JPA-%ED%99%9C%EC%9A%A9-1/dashboard) 강의와 해당된 실습을 진행  
