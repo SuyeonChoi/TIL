@@ -17,13 +17,13 @@ public class JpaMain {
 
         try {
 
-            //영속
-            Member member = em.find(Member.class, 150L);
-            member.setName("AAAAA");
+            Member member = new Member();
+            member.setId(3L);
+            member.setUsername("C");
+            member.setRoleType(RoleType.GUEST);
 
-            em.clear(); // 영속 -> 준영속 
+            em.persist(member);
 
-            System.out.println("==============");
             tx.commit(); // 필수
         } catch (Exception e) {
             tx.rollback();
