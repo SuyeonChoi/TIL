@@ -26,7 +26,7 @@ public class JpaMain {
             OrderItem orderItem = new OrderItem();
             orderItem.setOrder(order);
             em.persist(orderItem);
-            
+
             tx.commit(); // 필수
         } catch (Exception e) {
             tx.rollback();
