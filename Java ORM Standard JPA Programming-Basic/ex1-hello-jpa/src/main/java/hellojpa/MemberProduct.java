@@ -26,5 +26,5 @@ public class MemberProduct {
 	private int price;
 
 	private LocalDateTime orderDateTime;
-	
+
 }
